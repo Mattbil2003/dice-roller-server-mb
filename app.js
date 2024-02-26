@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require("cors");
 
 const corsOptions = {
-    origin: 'https://server-dice-roller-r1-mb.azurewebsites.net',
+    origin: 'https://zealous-pebble-00057ad0f.4.azurestaticapps.net',
   };
 
 const app = express();
