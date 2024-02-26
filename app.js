@@ -1,12 +1,15 @@
 const express = require('express');
 const cors = require("cors");
 
+const corsOptions = {
+    origin: 'https://server-dice-roller-r1-mb.azurewebsites.net',
+  };
+
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 
-app.use(cors({origin: '*'}));
+app.use(cors(corsOptions));
 app.use(express.json());
-
 app.get('/roll', (req, res) => {
     console.log(`request made`);
     const count = parseInt(req.query.count, 10);
